@@ -31,13 +31,13 @@ Otherwise, your project will be graded based on:
 
 1. The quality of the documentation and code.
    - Are all steps documented?
-   - Is the code understandable? (Add comments, documenation, or references where necessary)
+   - Is the code understandable? (Add comments and references where necessary)
 2. Understandibility of the experiments and results. For example:
    - Why did you opt for a particular method?
    - What does a particular visualization show?
    - What do your results mean?
 
-In particular, we will not be grading based on the results of your experiments. You can get full points even if your results are not statistically significant or you applied the wrong method, as long as you can explain why you did what you did.
+In particular, we will not be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade ;)
 
 Project Organization
 ------------
