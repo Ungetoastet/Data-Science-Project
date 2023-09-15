@@ -25,7 +25,7 @@ Your data science project must contain the following elements:
 Grading
 ------------
 
-To pass, your project must be fully reproducible without errors. We recommend running the project in a fresh environment and following the instructions you provide in this README before submitting to ensure reproducibilty.
+To pass, your project must be fully reproducible without errors. We recommend cloning your project, running it in a fresh environment, and following the instructions you provide in this README before submitting to ensure reproducibilty.
 
 Otherwise, your project will be graded based on:
 
