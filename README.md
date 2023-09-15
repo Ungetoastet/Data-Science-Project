@@ -13,7 +13,7 @@ Before you start working on your project, your research question and hypotheses 
 Requirements
 ------------
 
-The README.md needs to contain the instructions to download all data and reproduce your experiments. All analyses and results need to be reproducible and documented in notebooks. In a sense, the notebooks should act as a final report, both containing your hypotheses, methods, experiments, visualizations, analyses, plus results and also explanining these. They should be understandable to a third party, who has not worked on the project.
+The README.md needs to contain the instructions to download all data and reproduce your experiments. All analyses and results need to be reproducible and documented in notebooks. In a sense, the notebooks should act as a final report. They should contain your hypotheses, methods, experiments, visualizations, analyses, plus results and also explain these. They should be understandable to a third party who has not worked on the project.
 
 Your data science project must contain the following elements:
 
@@ -25,7 +25,7 @@ Your data science project must contain the following elements:
 Grading
 ------------
 
-To pass, your project must be fully reproducible without errors. To ensure reproducibilty, you can run the project in a fresh environment and follow the instructions you provide in this README.md.
+To pass, your project must be fully reproducible without errors. We recommend running the project in a fresh environment and following the instructions you provide in this README before submitting to ensure reproducibilty.
 
 Otherwise, your project will be graded based on:
 
@@ -37,7 +37,7 @@ Otherwise, your project will be graded based on:
    - What does a particular visualization show?
    - What do your results mean?
 
-In particular, we will not be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade ;)
+In particular, we will **not** be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade ;)
 
 Project Organization
 ------------
