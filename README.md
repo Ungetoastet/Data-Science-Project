@@ -17,7 +17,7 @@ The README.md needs to contain the instructions to download all data and reprodu
 
 Your data science project must contain the following elements:
 
-- A clearly stated problem definition as well as three hypotheses that you want to test.
+- A clearly stated problem definition as well as at least three hypotheses that you want to test.
 - At least one model that you have trained and evaluated.
 - At least one statistical significance test.
 - At least one visualization.
@@ -37,7 +37,7 @@ Otherwise, your project will be graded based on:
    - What does a particular visualization show?
    - What do your results mean?
 
-In particular, we will **not** be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade ;)
+In particular, we will **not** be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade 😉
 
 Project Organization
 ------------
