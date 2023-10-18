@@ -8,7 +8,14 @@ Data Sources
 
 A list of potential datasets to use can be found [here](https://github.com/awesomedata/awesome-public-datasets). You can also suggest your own dataset, but it needs to be approved.
 
-Before you start working on your project, your research question and hypotheses need to approved first.
+Research Question and Hypotheses
+------------
+
+Before you start working on your project, you must formulate research questions and connected hypotheses. These need to be approved, before you fully start working.
+
+What makes a good research question or hypothesis and what is the difference between the two?
+
+A research question is a general question that describes what topic or aspect should be explored or investigated. For example: "What are the characteristic differences between different iris flower types?" or "Is there a relationship between flower color and petal length?". Hypotheses are more concrete and make assumptions about the relationship between variables or phenomena. For example: "Iris flower A is has longer petals than iris flower B" or "Yellow flowers have longer petals than blue flowers". Importantly, hypotheses are empirically/experimentally verifiable! Whereas a research question guides the direction of your project, hypotheses guide the methods and experiments you will conduct.
 
 Requirements
 ------------
