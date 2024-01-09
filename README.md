@@ -17,6 +17,24 @@ What makes a good research question or hypothesis and what is the difference bet
 
 A research question is a general question that describes what topic or aspect should be explored or investigated. For example: "What are the characteristic differences between different iris flower types?" or "Is there a relationship between flower color and petal length?". Hypotheses are more concrete and make assumptions about the relationship between variables or phenomena. For example: "Iris flower A has longer petals than iris flower B" or "Yellow flowers have longer petals than blue flowers". Importantly, hypotheses are empirically/experimentally verifiable! Whereas a research question guides the direction of your project, hypotheses guide the methods and experiments you will conduct.
 
+Example
+------------
+
+Here is an example project description with research questions and hypotheses:
+
+```md
+In my project I will investigate if it is possible to predict the genre of a song based on its lyrics. As a basis I will use the [Spotify Tracks](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset) dataset and scrape the correpsonding lyrics from [Genius](https://genius.com/). I will then train a classifier to predict the genre of a song based on its lyrics. I will use the following research questions and hypotheses to guide my project:
+
+Research Questions:
+   - RQ1: Are there prototypical words/topics for different genres?
+   - RQ2: Is it possible to predict the genre of a song based on its lyrics?
+   - RQ3: How well does an unsupervised clustering of songs based on their lyrics match the genre labels?
+
+Hypotheses:
+   - H1: A songs word frequency distribution is a better predictor than the the number of words in a song.
+   - H2: A supervised classifier can predict the genre of a song better than an unsupervised clustering.
+```
+
 Requirements
 ------------
 
