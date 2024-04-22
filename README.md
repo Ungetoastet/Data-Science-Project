@@ -1,7 +1,7 @@
 Data Science Project
 ==============================
 
-This is a template for your final data science project. It offers a structure for your project, but does not have to be followed strictly. In case your project has different needs, feel free to adapt it.
+This is a template for your final data science project. It offers a structure for your project but does not have to be followed strictly. In case your project has different needs, feel free to adapt it.
 
 Data Sources
 ------------
@@ -50,22 +50,26 @@ Your data science project must contain the following elements:
 Grading
 ------------
 
-To pass, your project must be fully reproducible without errors. We recommend cloning your project, running it in a fresh environment, and following the instructions you provide in this README before submitting to ensure reproducibilty.
+To pass, your project must be fully reproducible without errors. We recommend cloning your project, running it in a fresh environment, and following the instructions you provide in this README before submitting it to ensure reproducibility.
 
-Otherwise, your project will be graded based on:
+Your project will be graded based on the quality of the documentation of the experiments and results. Use the following questions to guide your project:
 
-1. The quality of the documentation and code.
-   - Are all steps documented?
-   - Is the code understandable? (Add comments and references where necessary)
-2. Understandibility of the experiments and results. For example:
-   - Why did you opt for a particular method?
-   - What does a particular visualization show?
-   - What do your results mean?
+- Data:
+  - What are the main properties of your data? 
+  - What features does it have?
+- Questions / Hypotheses:
+  - What are your research questions and hypotheses and how did you test them?
+  - Why did you opt for a particular method?
+- Results:
+  - What does a particular metric, visualization, or hypothesis test show?
+  - What do your results suggest in the context of your questions / hypotheses?
 
-In particular, we will **not** be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade 😉
+In particular, we will **not** be grading based on the results of your experiments. You can get full points, as long as you can explain why you did what you did. We will not penalize you if your results are not statistically significant or if you applied an incorrect method or test. On the other hand, applying correct methods will certainly not hurt your grade 😉
 
 Project Organization
 ------------
+
+The following is a suggested project structure. If you have a different structure in mind, feel free to adapt it.
 
     ├── data
     │   ├── interim        <- Intermediate data that has been transformed
