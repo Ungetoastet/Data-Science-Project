@@ -31,7 +31,7 @@ Research Questions:
    - RQ3: How well does an unsupervised clustering of songs based on their lyrics match the genre labels?
 
 Hypotheses:
-   - H1: A songs word frequency distribution is a better predictor than the the number of words in a song.
+   - H1: A songs word frequency distribution is a better predictor for a song's genre than the the number of words in a song.
    - H2: A supervised classifier can predict the genre of a song better than an unsupervised clustering.
 ```
 
