@@ -6,7 +6,11 @@ This is a template for your final data science project. It offers a structure fo
 Data Sources
 ------------
 
-A list of potential datasets to use can be found [here](https://github.com/awesomedata/awesome-public-datasets). You can also suggest your own dataset, but it needs to be approved.
+Here's a list of several good places to look for datasets:
+
+ - [awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets)
+ - [kaggle](https://www.kaggle.com/datasets)
+ - [huggingface](https://huggingface.co/datasets)
 
 Research Question and Hypotheses
 ------------
