@@ -29,4 +29,4 @@ Sind python und pip installiert, können die benötigten Python Module installie
 
 ## Durchführung
 
-1. Daten herunterladen. Ein Script, um die Daten herunterzuladen befindet sich in `./src/data/1_download.py`. Dieses kann ausgeführt werden mit `python 1_download.py`. Das Script wird den kompletten Datensatz runterladen und die benötigten Dateien extrahieren.
+1. **Daten herunterladen** Ein Script, um den Datensatz herunterzuladen befindet sich in `./src/data/1_download.py`. Dieses kann ausgeführt werden mit `python 1_download.py`. Das Script wird den kompletten Datensatz runterladen und die benötigten Dateien extrahieren.
