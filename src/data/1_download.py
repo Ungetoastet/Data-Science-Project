@@ -10,7 +10,7 @@ def dataset_download(main_exe:bool = False) -> None:
     if main_exe:
         output_path = "../../data/raw/flight.zip"
     else:
-        output_path = "/data/raw/flight.zip"
+        output_path = "./data/raw/flight.zip"
 
     skipdl = False
     if os.path.exists(output_path):
