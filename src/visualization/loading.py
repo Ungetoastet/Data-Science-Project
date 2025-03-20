@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from tqdm import tqdm
+import random
 
 DATA_DIR = Path("../../data/filtered")
 FLIGHT_FILES = [
@@ -53,10 +54,7 @@ def load_all(chunk_size: int = 100000) -> tuple[pd.DataFrame, dict]:
     return df
 
 if __name__ == "__main__":
-    df = load_single(2018)
+    df = load_all()
     print(f"Coloumns in file: {df.columns.tolist()}")
-    print(f"First row: \n")
-    [print(f"{col}: {val}") for col, val in df.iloc[0].items()]
-    exit()
-    for y in range(2019, 2023):
-        load_single(y)
+    print(f"Random entry:")
+    [print(f"{col}: {val}") for col, val in df.iloc[random.randint(0, len(df)-1)].items()]
