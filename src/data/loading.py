@@ -3,7 +3,7 @@ from pathlib import Path
 from tqdm import tqdm
 import random
 
-DATA_DIR = Path("../../data/filtered")
+DATA_DIR = Path("../data/filtered")
 FLIGHT_FILES = [
     "Combined_Flights_2018.csv",
     "Combined_Flights_2019.csv",
@@ -21,7 +21,7 @@ def load_single(y:int, chunk_size: int = 100000) -> tuple[pd.DataFrame, dict]:
     total_rows = sum(1 for _ in open(DATA_DIR / f"Combined_Flights_{y}.csv"))
     df_chunks = []
     
-    with tqdm(total=total_rows, unit="rows", desc=f"Processing {y}", leave=False) as progress_bar:
+    with tqdm(total=total_rows, unit="rows", desc=f"Loading {y}", leave=False) as progress_bar:
         for chunk in chunk_iter:
             df_chunks.append(chunk)
             progress_bar.update(len(chunk))
@@ -41,7 +41,7 @@ def load_all(chunk_size: int = 100000) -> tuple[pd.DataFrame, dict]:
     # Create a progress bar for total rows across all files
     total_rows = sum(sum(1 for _ in open(DATA_DIR / file)) for file in FLIGHT_FILES)
     
-    with tqdm(total=total_rows, unit="rows", desc="Processing all years", leave=False) as progress_bar:
+    with tqdm(total=total_rows, unit="rows", desc="Loading all years", leave=False) as progress_bar:
         for file in FLIGHT_FILES:
             chunk_iter = pd.read_csv(DATA_DIR / file, chunksize=chunk_size)
             for chunk in chunk_iter:

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from tqdm import tqdm
 
@@ -10,8 +11,14 @@ def dataset_filter(chunk_size: int = 100_000, main_exe=False) -> None:
         input_folder = "../../data/extracted/"
         output_folder = "../../data/filtered/"
     else:
-        input_folder = "./data/extracted/"
-        output_folder = "./data/filtered/"
+        input_folder = "../data/extracted/"
+        output_folder = "../data/filtered/"
+
+    if os.path.exists(output_folder + "Combined_Flights_2022.csv"):
+        ans = input("Filtered files found. Skip filtration? (Y/n)")
+        if ans.upper() == "Y":
+            print("Skipping filtration...")
+            return
 
     files = [
         "Combined_Flights_2018.csv",
