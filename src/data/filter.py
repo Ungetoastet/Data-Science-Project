@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-def dataset_filter(chunk_size: int = 100_000, main_exe=False) -> None:
+def dataset_filter(chunk_size: int = 100_000, main_exe=False, auto_skip=False) -> None:
     """Filters out unnecessary coloumns to reduce file size"""
 
     columns = ["FlightDate", "Airline", "Cancelled", "Diverted", "CRSDepTime", "DepTime", "DepDelay", "ArrTime", "ArrDelay", "AirTime", "CRSElapsedTime", "ActualElapsedTime", "Distance", "DayOfWeek", "Operating_Airline", "Tail_Number", "Flight_Number_Operating_Airline", "OriginCityName", "OriginStateName", "DestCityName", "DestStateName", "CRSArrTime"]
@@ -15,10 +15,14 @@ def dataset_filter(chunk_size: int = 100_000, main_exe=False) -> None:
         output_folder = "../data/filtered/"
 
     if os.path.exists(output_folder + "Combined_Flights_2022.csv"):
-        ans = input("Filtered files found. Skip filtration? (Y/n)")
-        if ans.upper() == "Y":
-            print("Skipping filtration...")
+        if auto_skip:
+            print("Auto Skipping filtration...")
             return
+        else:
+            ans = input("Filtered files found. Skip filtration? (Y/n)")
+            if ans.upper() == "Y":
+                print("Skipping filtration...")
+                return
 
     files = [
         "Combined_Flights_2018.csv",

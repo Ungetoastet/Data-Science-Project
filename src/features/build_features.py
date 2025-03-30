@@ -30,7 +30,7 @@ def build_dep_airport_rank(df: pd.DataFrame):
     airport_counts = pd.DataFrame({"Airport": unique, "Count": count})
     airport_counts = airport_counts.sort_values(by="Count", ascending=False)
 
-    df["DestRank"] = df["OriginCityName"].map(
+    df["DepRank"] = df["OriginCityName"].map(
         airport_counts.set_index("Airport")["Count"].rank(method="dense", ascending=False).astype(int)
     )
     return df

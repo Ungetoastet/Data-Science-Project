@@ -3,7 +3,7 @@ import os
 
 from tqdm import tqdm
 
-def dataset_extract(main_exe:bool = False) -> None:    
+def dataset_extract(main_exe:bool = False, auto_skip = False) -> None:    
     """Extracts the zip file into a /data/extracted/"""
     if main_exe:
         input_path = "../../data/raw/flight.zip"
@@ -12,11 +12,15 @@ def dataset_extract(main_exe:bool = False) -> None:
         input_path = "../data/raw/flight.zip"
         output_path = "../data/extracted/Combined_Flights_2022.csv"
 
-    if os.path.exists(output_path):
-        ans = input("Extracted files found. Skip extraction? (Y/n)")
-        if ans.upper() == "Y":
-            print("Skipping extraction...")
+    if os.path.exists(output_path) :
+        if auto_skip:
+            print("Auto Skipping extraction...")
             return
+        else:
+            ans = input("Extracted files found. Skip extraction? (Y/n)")
+            if ans.upper() == "Y":
+                print("Skipping extraction...")
+                return
 
     with zipfile.ZipFile(input_path, "r") as zr:
         # Leave out unnecessary doubles
