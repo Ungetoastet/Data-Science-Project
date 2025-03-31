@@ -27,6 +27,14 @@ Das kann überprüft werden mit folgenden Befehlen:
 Sind python und pip installiert, können die benötigten Python Module installiert werden:
 `pip install -r requirements.txt`.
 
-## Durchführung
+**Optional:** Falls beim Trainieren des Neuronalen Netzes die GPU genutzt werden soll, muss eine andere Version von Pytorch installiert werden. Mehr dazu [hier](https://pytorch.org/get-started/locally/).
 
-1. **Daten herunterladen** Ein Script, um den Datensatz herunterzuladen befindet sich in `./src/data/1_download.py`. Dieses kann ausgeführt werden mit `python 1_download.py`. Das Script wird den kompletten Datensatz runterladen und die benötigten Dateien extrahieren.
+## Durchführung und Organisation
+
+Das gesamte Projekt kann mit dem notebook in `notebooks/main.ipynb` durchgefuehrt werden.
+
+In dem Notebook ist der high-level code, die Implementierungen sind in den jeweiligen Ordnern in `src`.
+
+Das fertige, trainierte Neuronale Netz kann in `models` gefunden werden.
+
+Die heruntergeladenen, extrahierten und gefilterten Daten sind im Ordner `data`.

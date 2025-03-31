@@ -38,3 +38,19 @@ def build_dep_airport_rank(df: pd.DataFrame):
 def build_day_of_year(df: pd.DataFrame):
     df["DayOfYear"] = pd.to_datetime(df["FlightDate"]).dt.dayofyear
     return df
+
+
+def build_airport_load(df: pd.DataFrame):
+    df["FlightDate"] = pd.to_datetime(df["FlightDate"])
+
+    # Abflüge pro Flughafen & Tag zählen
+    dep_counts = df.groupby(["FlightDate", "OriginCityName"]).size().reset_index(name="DepLoad")
+
+    # Ankünfte pro Flughafen & Tag zählen
+    arr_counts = df.groupby(["FlightDate", "DestCityName"]).size().reset_index(name="ArrLoad")
+
+    # Die Werte zum Haupt-DataFrame mergen
+    df = df.merge(dep_counts, on=["FlightDate", "OriginCityName"], how="left")
+    df = df.merge(arr_counts, on=["FlightDate", "DestCityName"], how="left")
+
+    return df

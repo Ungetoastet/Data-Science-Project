@@ -58,7 +58,9 @@ def test_network(model, data, test_size, metric, loss_fn):
     model.eval()
     metric.reset()
     avg_loss = 0.0
-    loader = torch.utils.data.DataLoader(data, batch_size=512, shuffle=True, num_workers=4, pin_memory=True)
+    indices = torch.randperm(len(data))[:256*test_size]
+    subset = torch.utils.data.Subset(data, indices)
+    loader = torch.utils.data.DataLoader(subset, batch_size=256, num_workers=0)
     processed = 0
     for x, y in loader:
         x = x.float()
@@ -67,7 +69,7 @@ def test_network(model, data, test_size, metric, loss_fn):
 
         logits = model(x)
         loss = loss_fn(logits, y)
-        metric(logits, y)
+        metric(torch.expm1(torch.abs(logits)) * torch.sign(logits), torch.expm1(torch.abs(y)) * torch.sign(y))
         avg_loss += loss.item()
         processed += 1
         if processed >= test_size:
