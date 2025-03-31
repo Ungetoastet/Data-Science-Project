@@ -38,3 +38,12 @@ In dem Notebook ist der high-level code, die Implementierungen sind in den jewei
 Das fertige, trainierte Neuronale Netz kann in `models` gefunden werden.
 
 Die heruntergeladenen, extrahierten und gefilterten Daten sind im Ordner `data`.
+
+### Durchfuehrungsinfo
+
+Das Projekt wurde auf Windows und Linux getestet, auf Linux mit ROCm und auf Windows auf der CPU.
+
+Die gesamte Ausfuehrungszeit betrug auf Linux+ROCm ca. 15 Minuten auf folgender Maschine: 
+- CPU: R5 7700x
+- RAM: 32GB@6000, DDR5
+- GPU: RX 7900 GRE
