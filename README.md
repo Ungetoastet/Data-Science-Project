@@ -37,7 +37,7 @@ In dem Notebook ist der high-level code, die Implementierungen sind in den jewei
 
 Das fertige, trainierte Neuronale Netz kann in `models` gefunden werden.
 
-Die heruntergeladenen, extrahierten und gefilterten Daten sind im Ordner `data`.
+Die heruntergeladenen, extrahierten und gefilterten Daten sind nach der Ausfuehrung des Notebooks im Ordner `data`.
 
 ### Durchfuehrungsinfo
 
