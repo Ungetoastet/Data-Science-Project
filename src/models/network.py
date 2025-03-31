@@ -63,6 +63,8 @@ def test_network(model, data, test_size, metric, loss_fn):
     for x, y in loader:
         x = x.float()
         y = y.float().view(-1, 1)
+        y = torch.sign(y) * torch.log1p(torch.abs(y))
+
         logits = model(x)
         loss = loss_fn(logits, y)
         metric(logits, y)
@@ -75,14 +77,6 @@ def test_network(model, data, test_size, metric, loss_fn):
     metric_result = metric.compute()
     metric.reset()
     return metric_result, avg_loss
-
-
-def move_data(dataset, device):
-    x_list, y_list = [], []
-    for x, y in dataset:
-        x_list.append(x.to(device))
-        y_list.append(y.to(device))
-    return torch.utils.data.TensorDataset(torch.stack(x_list), torch.stack(y_list))
 
 class MLP_Block(nn.Module):
     def __init__(self, layer_count, hidden_size, nonlinearity, regularization):
@@ -111,7 +105,8 @@ class MLP(nn.Module):
         self.activation = activ
 
         # Zwei Bloecke mit unterschiedlicher Regularisierung
-        self.block1 = MLP_Block(block1_layers, hidden_size, activ, nn.BatchNorm1d(hidden_size))
+        # self.block1 = MLP_Block(block1_layers, hidden_size, activ, nn.BatchNorm1d(hidden_size))
+        self.block1 = MLP_Block(block1_layers, hidden_size, activ, nn.Dropout(p=dropout))
         self.block2 = MLP_Block(block2_layers, hidden_size, activ, nn.Dropout(p=dropout))
 
         self.out_layer = nn.Linear(hidden_size, num_out)
@@ -143,3 +138,20 @@ class MLP(nn.Module):
 
         out = self.out_layer(b2)
         return out
+
+
+class Normalizer:
+    def __init__(self, mean, std):
+        self.mean = mean
+        self.std = std
+    
+    def __call__(self, x):
+        return (x - self.mean) / self.std
+
+
+def move_and_norm_data(dataset, normalizer:Normalizer, device):
+    x_list, y_list = [], []
+    for x, y in dataset:
+        x_list.append(normalizer(x).to(device))
+        y_list.append(y.to(device))
+    return torch.utils.data.TensorDataset(torch.stack(x_list), torch.stack(y_list))
